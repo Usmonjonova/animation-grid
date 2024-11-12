@@ -32,20 +32,24 @@ body {
 #animation-title,
 #grid-title {
     text-align: center;
-    margin-top: 30px;
+    padding-top: 60px;
     cursor: pointer;
     text-decoration: none;
 }
 
-#grid-title {
-    margin-bottom: -100px;
-}
-
-#animation-title a {
+a {
     text-decoration: none;
     color: var(--primary-color-1);
 }
 
+#grid-title a {
+    color: var(--color-animation);
+}
+
+#grid-title,
+#animation-title {
+    margin-bottom: -70px;
+}
 
 /* GRID */
 
