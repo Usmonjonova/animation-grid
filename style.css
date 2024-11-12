@@ -11,7 +11,9 @@
 /* COLORS */
 :root {
     --primary-color-1: #333333;
+    --color-animation: #ffffff;
     --primary-color-9: #fcf4d1;
+    --color-background: #404258;
     --secondary-color-13: #ccddbb;
     --secondary-color-2: #c7d8db;
     --secondary-color-22: #f8e9a0;
@@ -24,7 +26,28 @@ body {
     color: var(--primary-color-1);
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
+
+#animation-title,
+#grid-title {
+    text-align: center;
+    margin-top: 30px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#grid-title {
+    margin-bottom: -100px;
+}
+
+#animation-title a {
+    text-decoration: none;
+    color: var(--primary-color-1);
+}
+
+
+/* GRID */
 
 .container {
     width: 100%;
@@ -205,4 +228,50 @@ body {
 .item24 {
     grid-column: span 2;
     grid-row: span 1;
+}
+
+/* ANIMATION STYLES */
+
+
+#animation-section {
+    background-color: var(--color-background);
+    color: var(--color-animation);
+}
+
+.animation-box {
+    transform: rotate(-45deg);
+    width: 150px;
+    padding-inline: 5px;
+    border-bottom: 4px solid var(--color-animation);
+}
+
+.animation-square {
+    width: 25px;
+    border-radius: 2px;
+    height: 25px;
+    border: 4px solid var(--color-animation);
+    animation: rotate-move 3s infinite;
+    transform-origin: center;
+}
+
+@keyframes rotate-move {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateX(30px) rotate(90deg);
+    }
+
+    50% {
+        transform: translateX(60px) rotate(180deg);
+    }
+
+    75% {
+        transform: translateX(90px) rotate(270deg);
+    }
+
+    100% {
+        transform: translateX(0) rotate(90deg);
+    }
 }
