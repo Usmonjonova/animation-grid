@@ -1,0 +1,41 @@
+/* RESET CSS  */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COLORS */
+:root {
+    --primary-color-1: #333333;
+    --primary-color-9: #fcf4d1;
+    --secondary-color-13: #ccddbb;
+    --secondary-color-2: #c7d8db;
+    --secondary-color-22: #f8e9a0;
+    --secondary-color-6: #f7d9c5;
+}
+
+body {
+    background-color: var(--primary-color-9);
+    color: var(--primary-color-1);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-wrapper {
+    width: 600px;
+    height: 360px;
+    border: 1px dashed lightgray;
+    display: grid;
+}
